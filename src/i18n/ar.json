@@ -1,30 +1,30 @@
 {
   "nav": {
-    "home": "الرئيسية",
-    "collection": "المجموعة",
-    "about": "من نحن",
-    "contact": "اتصل بنا"
+    "home": "Home",
+    "collection": "Our Collection",
+    "about": "About Us",
+    "contact": "Contact"
   },
   "hero": {
-    "title": "تفصيل مرايات بذوق راقٍ",
-    "subtitle": "مرايات بتفصيل أنيق، جودة عالية، ولمسة بتشبه ذوقك",
-    "description": "سراب مش بس مرايات… سراب تفصيل، فخامة، ولمسة تميز",
-    "imageAlt": "مرايا فاخرة بتصميم أنيق"
+    "title": "Custom Mirrors with Refined Taste",
+    "subtitle": "Elegant custom mirrors, premium quality, designed for your style",
+    "description": "Sarab is not just mirrors — it’s craftsmanship, luxury, and distinction",
+    "imageAlt": "Luxury mirror decor"
   },
   "about": {
-    "title": "من نحن",
-    "text": "نحن نصنع مرايات فاخرة بتصميم أنيق وجودة عالية."
+    "title": "About Us",
+    "text": "We create luxury mirrors with elegant design and high quality."
   },
   "collection": {
-    "title": "مجموعة مراياتنا",
-    "items": ["موديل 1", "موديل 2", "موديل 3"]
+    "title": "Our Collection",
+    "items": ["Model 1", "Model 2", "Model 3"]
   },
   "contact": {
-    "title": "تواصل معنا",
-    "phone": "الهاتف",
-    "email": "البريد الإلكتروني"
+    "title": "Contact Us",
+    "phone": "Phone",
+    "email": "Email"
   },
   "footer": {
-    "rights": "جميع الحقوق محفوظة © 2026 سراب"
+    "rights": "All rights reserved © 2026 Sarab"
   }
 }
