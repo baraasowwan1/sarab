@@ -1,7 +1,9 @@
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,14 +17,14 @@ export function Contact() {
     setStatus('sending');
 
     const phoneNumber = '962795028749'; // رقم الواتساب بدون +
-    
+
     const whatsappMessage = `
-📩 New Contact Message
+📩 ${t('contact.whatsappMessageTitle')}
 
-👤 Name: ${formData.name}
-📧 Email: ${formData.email}
+👤 ${t('contact.form.name')}: ${formData.name}
+📧 ${t('contact.form.email')}: ${formData.email}
 
-💬 Message:
+💬 ${t('contact.form.message')}:
 ${formData.message}
     `;
 
@@ -49,36 +51,28 @@ ${formData.message}
     <section id="contact" className="py-20 px-4 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4">Visit Us</h2>
-          <p className="text-xl text-gray-600">
-            Experience our collection in person at our Amman showroom
-          </p>
+          <h2 className="text-4xl md:text-5xl mb-4">{t('contact.title')}</h2>
+          <p className="text-xl text-gray-600">{t('contact.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Info */}
           <div className="space-y-8">
-            <Info icon={<MapPin />} title="Location" text="Sarab Mirror Decor\nAmman, Jordan" />
-            <Info icon={<Phone />} title="Phone" text="+962 79 502 8749" />
-            <Info icon={<Mail />} title="Email" text="alihamad19971997a@gmail.com" />
-            <Info
-              icon={<Clock />}
-              title="Hours"
-              text={`Sunday - Thursday: 9:00 AM - 7:00 PM
-Saturday: 10:00 AM - 6:00 PM
-Friday: Closed`}
-            />
+            <Info icon={<MapPin />} title={t('contact.info.location.title')} text={t('contact.info.location.text')} />
+            <Info icon={<Phone />} title={t('contact.info.phone.title')} text={t('contact.info.phone.text')} />
+            <Info icon={<Mail />} title={t('contact.info.email.title')} text={t('contact.info.email.text')} />
+            <Info icon={<Clock />} title={t('contact.info.hours.title')} text={t('contact.info.hours.text')} />
           </div>
 
           {/* Form */}
           <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl mb-6">Send us a Message</h3>
+            <h3 className="text-2xl mb-6">{t('contact.form.title')}</h3>
             <form className="space-y-4" onSubmit={handleSubmit}>
-              <Input label="Name" id="name" value={formData.name} onChange={handleChange} />
-              <Input label="Email" id="email" type="email" value={formData.email} onChange={handleChange} />
+              <Input label={t('contact.form.name')} id="name" value={formData.name} onChange={handleChange} />
+              <Input label={t('contact.form.email')} id="email" type="email" value={formData.email} onChange={handleChange} />
 
               <div>
-                <label htmlFor="message" className="block mb-2 text-gray-700">Message</label>
+                <label htmlFor="message" className="block mb-2 text-gray-700">{t('contact.form.message')}</label>
                 <textarea
                   id="message"
                   rows={4}
@@ -86,7 +80,7 @@ Friday: Closed`}
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-400"
-                  placeholder="Tell us about your project..."
+                  placeholder={t('contact.form.messagePlaceholder')}
                 />
               </div>
 
@@ -94,7 +88,7 @@ Friday: Closed`}
                 type="submit"
                 className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-500 transition"
               >
-                Send via WhatsApp
+                {t('contact.form.submit')}
               </button>
             </form>
           </div>
@@ -112,25 +106,4 @@ function Info({ icon, title, text }: any) {
         {icon}
       </div>
       <div>
-        <h3 className="text-xl mb-2">{title}</h3>
-        <p className="text-gray-600 whitespace-pre-line">{text}</p>
-      </div>
-    </div>
-  );
-}
-
-function Input({ label, id, value, onChange, type = 'text' }: any) {
-  return (
-    <div>
-      <label htmlFor={id} className="block mb-2 text-gray-700">{label}</label>
-      <input
-        id={id}
-        type={type}
-        required
-        value={value}
-        onChange={onChange}
-        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-400"
-      />
-    </div>
-  );
-}
+        <h3
