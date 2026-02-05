@@ -1,4 +1,10 @@
 {
+  "nav": {
+    "home": "Home",
+    "collection": "Collection",
+    "about": "About",
+    "contact": "Contact"
+  },
   "hero": {
     "title": "Custom Mirrors with Refined Taste",
     "subtitle": "Elegant custom mirrors, premium quality, designed for your style",
