@@ -2,7 +2,6 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
-import logo from "../assets/logo.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +15,6 @@ export function Header() {
     }
   };
 
-  // ✅ تعديل مهم
   const toggleLanguage = () => {
     const newLang = i18n.language === "ar" ? "en" : "ar";
     i18n.changeLanguage(newLang);
@@ -26,11 +24,11 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-
+        
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
-            src={logo}
+            src="/logo.png"   // ✅ من داخل public
             alt="Sarab Logo"
             className="h-10 w-auto"
           />
