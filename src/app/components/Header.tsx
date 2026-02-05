@@ -1,11 +1,16 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
+
+  // تحديث اتجاه الصفحة تلقائيًا عند تغيير اللغة
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+  }, [i18n.language]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -29,7 +34,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <img
             src="https://i.im.ge/2026/02/05/ehw9hC.logo-png.png"
-            alt="Sarab Logo"
+            alt={t("hero.imageAlt")}
             className="h-10 w-auto object-contain"
             loading="lazy"
           />
