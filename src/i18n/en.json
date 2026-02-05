@@ -13,7 +13,26 @@
   },
   "about": {
     "title": "About Us",
-    "text": "We create luxury mirrors with elegant designs and high quality."
+    "text": "We create luxury mirrors with elegant design and high quality.",
+    "features": [
+      {
+        "title": "Premium Quality",
+        "description": "Handpicked mirrors crafted with the finest materials and attention to detail"
+      },
+      {
+        "title": "Expert Design",
+        "description": "Curated collection featuring contemporary and classic designs"
+      },
+      {
+        "title": "Personalized Service",
+        "description": "Dedicated consultation to help you find the perfect mirror for your space"
+      }
+    ],
+    "whyChoose": {
+      "title": "Why Choose Sarab?",
+      "text1": "We believe that mirrors are more than just functional pieces—they are art that can transform any room.",
+      "text2": "Whether you're looking to create the illusion of space, enhance natural light, or add a statement piece to your interior, our team is here to guide you."
+    }
   },
   "collection": {
     "title": "Our Collection",
@@ -21,8 +40,22 @@
   },
   "contact": {
     "title": "Contact Us",
-    "phone": "Phone",
-    "email": "Email"
+    "subtitle": "Visit or send us a message",
+    "whatsappMessageTitle": "New Contact Message",
+    "info": {
+      "location": { "title": "Location", "text": "Sarab Mirror Decor\nAmman, Jordan" },
+      "phone": { "title": "Phone", "text": "+962 79 502 8749" },
+      "email": { "title": "Email", "text": "alihamad19971997a@gmail.com" },
+      "hours": { "title": "Hours", "text": "Sunday - Thursday: 9:00 AM - 7:00 PM\nSaturday: 10:00 AM - 6:00 PM\nFriday: Closed" }
+    },
+    "form": {
+      "title": "Send a Message",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "submit": "Send via WhatsApp"
+    }
   },
   "footer": {
     "rights": "All rights reserved © 2026 Sarab"
