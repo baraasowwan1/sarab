@@ -4,20 +4,14 @@ import { useTranslation } from 'react-i18next';
 
 export function Contact() {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'sending'>('idle');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
 
-    const phoneNumber = '962795028749'; // رقم الواتساب بدون +
-
+    const phoneNumber = '962795028749';
     const whatsappMessage = `
 📩 ${t('contact.whatsappMessageTitle')}
 
@@ -26,25 +20,15 @@ export function Contact() {
 
 💬 ${t('contact.form.message')}:
 ${formData.message}
-    `;
+`;
 
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
-
-    window.open(whatsappUrl, '_blank');
-
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
     setFormData({ name: '', email: '', message: '' });
     setStatus('idle');
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.id]: e.target.value
-    });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
   return (
@@ -56,7 +40,6 @@ ${formData.message}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Info */}
           <div className="space-y-8">
             <Info icon={<MapPin />} title={t('contact.info.location.title')} text={t('contact.info.location.text')} />
             <Info icon={<Phone />} title={t('contact.info.phone.title')} text={t('contact.info.phone.text')} />
@@ -64,13 +47,11 @@ ${formData.message}
             <Info icon={<Clock />} title={t('contact.info.hours.title')} text={t('contact.info.hours.text')} />
           </div>
 
-          {/* Form */}
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl mb-6">{t('contact.form.title')}</h3>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <Input label={t('contact.form.name')} id="name" value={formData.name} onChange={handleChange} />
               <Input label={t('contact.form.email')} id="email" type="email" value={formData.email} onChange={handleChange} />
-
               <div>
                 <label htmlFor="message" className="block mb-2 text-gray-700">{t('contact.form.message')}</label>
                 <textarea
@@ -83,11 +64,7 @@ ${formData.message}
                   placeholder={t('contact.form.messagePlaceholder')}
                 />
               </div>
-
-              <button
-                type="submit"
-                className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-500 transition"
-              >
+              <button type="submit" className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-500 transition">
                 {t('contact.form.submit')}
               </button>
             </form>
@@ -98,12 +75,30 @@ ${formData.message}
   );
 }
 
-/* Components */
 function Info({ icon, title, text }: any) {
   return (
     <div className="flex gap-4">
-      <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-gray-700">
-        {icon}
-      </div>
+      <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-gray-700">{icon}</div>
       <div>
-        <h3
+        <h3 className="text-xl mb-2">{title}</h3>
+        <p className="text-gray-600 whitespace-pre-line">{text}</p>
+      </div>
+    </div>
+  );
+}
+
+function Input({ label, id, value, onChange, type = 'text' }: any) {
+  return (
+    <div>
+      <label htmlFor={id} className="block mb-2 text-gray-700">{label}</label>
+      <input
+        id={id}
+        type={type}
+        required
+        value={value}
+        onChange={onChange}
+        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-400"
+      />
+    </div>
+  );
+}
