@@ -24,13 +24,14 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        
+
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
-            src="/logo.png"   // ✅ من داخل public
+            src="https://i.im.ge/2026/02/05/ehw9hC.logo-png.png"
             alt="Sarab Logo"
-            className="h-10 w-auto"
+            className="h-10 w-auto object-contain"
+            loading="lazy"
           />
         </div>
 
