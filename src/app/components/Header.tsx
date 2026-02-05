@@ -28,7 +28,7 @@ export function Header() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
-            src="https://i.im.ge/2026/02/05/ehw9hC.logo-png.png"
+            src="https://im.ge/i/ehw9hC"
             alt="Sarab Logo"
             className="h-10 w-auto object-contain"
             loading="lazy"
