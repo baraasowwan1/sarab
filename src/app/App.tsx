@@ -21,37 +21,37 @@ export default function App() {
     {
       id: 1,
       title: t("collection.modern.title"),
-      description: t("collection.modern.desc"),
+      description: t(""),
       imageUrl: "https://i.im.ge/2025/12/24/BiWP7y.1.jpeg",
     },
     {
       id: 2,
       title: t("collection.classic.title"),
-      description: t("collection.classic.desc"),
+      description: t(""),
       imageUrl: "https://i.im.ge/2025/12/24/BiWb0X.2.jpeg",
     },
     {
       id: 3,
       title: t("collection.statement.title"),
-      description: t("collection.statement.desc"),
+      description: t(""),
       imageUrl: "https://i.im.ge/2025/12/24/BiWxKK.3.jpeg",
     },
     {
       id: 4,
       title: t("collection.full.title"),
-      description: t("collection.full.desc"),
+      description: t(""),
       imageUrl: "https://i.im.ge/2025/12/24/BiWypz.4.jpeg",
     },
     {
       id: 5,
       title: t("collection.wall.title"),
-      description: t("collection.wall.desc"),
+      description: t(""),
       imageUrl: "https://i.im.ge/2025/12/24/BiWwca.5.jpeg",
     },
     {
       id: 6,
       title: t("collection.custom.title"),
-      description: t("collection.custom.desc"),
+      description: t(""),
       imageUrl: "https://i.im.ge/2025/12/24/BiWE6F.6.jpeg",
     },
   ];
