@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "collection": "Collection",
-    "about": "About",
+    "about": "About Us",
     "contact": "Contact"
   },
   "hero": {
@@ -10,5 +10,21 @@
     "subtitle": "Elegant custom mirrors, premium quality, designed for your style",
     "description": "Sarab is not just mirrors — it’s craftsmanship, luxury, and distinction",
     "imageAlt": "Luxury mirror decor"
+  },
+  "about": {
+    "title": "About Us",
+    "text": "We create luxury mirrors with elegant designs and high quality."
+  },
+  "collection": {
+    "title": "Our Collection",
+    "items": ["Model 1", "Model 2", "Model 3"]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "footer": {
+    "rights": "All rights reserved © 2026 Sarab"
   }
 }
