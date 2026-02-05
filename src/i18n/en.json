@@ -1,5 +1,8 @@
 {
-  "heroTitle": "Welcome to Sarab",
-  "heroSubtitle": "We provide professional digital solutions",
-  "contact": "Contact Us"
+  "hero": {
+    "title": "Custom Mirrors with Refined Taste",
+    "subtitle": "Elegant custom mirrors, premium quality, designed for your style",
+    "description": "Sarab is not just mirrors — it’s craftsmanship, luxury, and distinction",
+    "imageAlt": "Luxury mirror decor"
+  }
 }
